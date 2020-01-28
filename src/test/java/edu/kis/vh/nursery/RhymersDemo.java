@@ -5,9 +5,11 @@ import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
-class RhymersDemo {
+class RhymersDemo
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+    {
 		Rhymersfactory factory = new DefaultRhymersFactory();
 		
 		defaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
@@ -21,7 +23,8 @@ class RhymersDemo {
 		for (int i = 1; i < 15; i++)
 			rhymers[3].countIn(rn.nextInt(20));
 		
-		for (int i = 0; i < rhymers.length; i++) {
+		for (int i = 0; i < rhymers.length; i++)
+		{
 			while (!rhymers[i].callCheck())
 				System.out.print(rhymers[i].countOut() + "  ");
 			System.out.println();
@@ -31,5 +34,5 @@ class RhymersDemo {
 				+ ((HanoiRhymer) rhymers[3]).reportRejected());
 		
 	}
-	
+
 }

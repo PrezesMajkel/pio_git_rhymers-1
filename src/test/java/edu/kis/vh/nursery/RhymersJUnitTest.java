@@ -3,10 +3,12 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class RhymersJUnitTest {
+public class RhymersJUnitTest
+{
 
 	@Test
-	public void testCountIn() {
+	public void testCountIn()
+	{
 		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
 		int testValue = 4;
 		rhymer.countIn(testValue);
@@ -16,7 +18,8 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testCallCheck() {
+	public void testCallCheck()
+	{
 		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
@@ -28,10 +31,12 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testIsFull() {
+	public void testIsFull()
+	{
 		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		for (int i = 0; i < STACK_CAPACITY; i++)
+		{
 			boolean result = rhymer.isFull();
 			Assert.assertEquals(false, result);
 			rhymer.countIn(888);
@@ -42,7 +47,8 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testPeekaboo() {
+	public void testPeekaboo()
+	{
 		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
@@ -59,7 +65,8 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testCountOut() {
+	public void testCountOut()
+	{
 		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
