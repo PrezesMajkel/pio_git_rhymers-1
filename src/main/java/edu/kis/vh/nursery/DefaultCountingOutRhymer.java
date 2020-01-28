@@ -27,15 +27,25 @@ public class DefaultCountingOutRhymer
     protected int peekaboo()
     {
         if (callCheck())
-            return -1;
+            return EMPTY;
         return NUMBERS[EMPTY];
     }
 
     public int countOut()
     {
         if (callCheck())
-            return -1;
+            return EMPTY;
         return NUMBERS[EMPTY--];
     }
 
+    public int getTotal()
+    {
+        return EMPTY;
+    }
+
+    public int setTotal(int total)
+    {
+        this.EMPTY = total;
+        return this.EMPTY;
+    }
 }
