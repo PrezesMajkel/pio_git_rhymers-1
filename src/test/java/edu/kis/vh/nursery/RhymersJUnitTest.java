@@ -3,11 +3,13 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class RhymersJUnitTest {
+public class RhymersJUnitTest
+{
 
 	@Test
-	public void testCountIn() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
+	public void testCountIn()
+	{
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -16,8 +18,9 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testCallCheck() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
+	public void testCallCheck()
+	{
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -28,10 +31,12 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testIsFull() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
+	public void testIsFull()
+	{
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		for (int i = 0; i < STACK_CAPACITY; i++)
+		{
 			boolean result = rhymer.isFull();
 			Assert.assertEquals(false, result);
 			rhymer.countIn(888);
@@ -42,8 +47,9 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testPeekaboo() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
+	public void testPeekaboo()
+	{
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
@@ -59,8 +65,9 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testCountOut() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
+	public void testCountOut()
+	{
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
